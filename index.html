@@ -1,1 +1,26 @@
-<html><head><title>Calculator</title></head><body><h1>Hello</h1></body></html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="pillheader">
+    <h1 id="headertext">Калькулятор</h1>
+    </div>
+    <div class="calc">
+        <input type="number" id="firstnum" placeholder="Введите 1ое число">
+        <select  id="opchoose">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*" >*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="secondnum" placeholder="Введите 2ое число">
+        <button id="countbtn">Посчитать</button>
+        <div id="countdisplay"></div>
+    </div>
+</body>
+</html>

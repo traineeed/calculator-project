@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="pillheader">
+    <h1 id="headertext">Calculator</h1>
+    </div>
+    <div class="calc">
+        <input type="number" id="firstnum" placeholder="1st number">
+        <select  id="opchoose">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*" >*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="secondnum" placeholder="2nd number">
+        <button id="countbtn">Count</button>
+        <div id="countdisplay">
+            <h2>Result:</h2>
+            <h4 id="result">...</h4>
+        </div>
+        <div id="counthistory">
+            <h2 id="historyh2">Count history:</h2>
+            <button id="cleanbtn">Clear</button>
+        </div>
+        <div id="langswitch">
+            <a href="index.html"><button id="langbtn">Русский</button></a>
+        </div>
+    </div>
+</body>
+</html>

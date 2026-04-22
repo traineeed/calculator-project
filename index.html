@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator-project</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="pillheader">
@@ -20,7 +21,17 @@
         </select>
         <input type="number" id="secondnum" placeholder="Введите 2ое число">
         <button id="countbtn">Посчитать</button>
-        <div id="countdisplay"></div>
+        <div id="countdisplay">
+            <h2>Результат:</h2>
+            <h4 id="result">...</h4>
+        </div>
+        <div id="counthistory">
+            <h2 id="historyh2">История вычислений:</h2>
+            <button id="cleanbtn">Очистить</button>
+        </div>
+        <div id="langswitch">
+            <a href="indexENG.html"><button id="langbtn">English</button></a>
+        </div>
     </div>
 </body>
 </html>

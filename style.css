@@ -1,20 +1,35 @@
+@media (max-width: 500px) {
+    .calc {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    #firstnum, #secondnum, #countbtn, #opchoose {
+        width: 80%;
+        margin-left: 0;
+    }
+    #langbtn {
+        width: 80%;
+        margin-top: 30px;
+    }
+}
+
 body, html {
     margin: 0px;
-    
 }
-body{
-    background: #2a9b6e;
+body {
     background: linear-gradient(90deg, rgba(42, 155, 110, 1) 10%, rgba(31, 153, 82, 1) 65%, rgba(227, 205, 9, 1) 100%);
     font-family: 'Montserrat', sans-serif;
 }
 #headertext {
     font-size: 200%;
-    color:azure;
+    color: azure;
     text-align: center;
 }
-#pillheader{
+#pillheader {
     background-color: black;
-    width: 250px;
+    width: 90%;
+    max-width: 800px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -23,28 +38,28 @@ body{
     margin: 10px auto 0 auto;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
-#pillheader:hover{
+#pillheader:hover {
     transform: scale(1.1);
     transition: 0.3s;
     cursor: pointer;
 }
 .calc {
-    width: 800px;
-    height: 600px;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    min-height: 400px;
     background-color: white;
     border-style: outset;
     border-width: 5px;
     border-color: black;
     margin: 20px auto 0 auto;
     display: flex;
-    flex-wrap: wrap;        
+    flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    
 }
-
-input{
+input {
     height: 50px;
     margin-top: 1cm;
 }
@@ -55,12 +70,11 @@ input{
     margin-left: 10px;
     margin-right: 10px;
 }
-#firstnum , #secondnum{
-    width: 200px;
-
+#firstnum, #secondnum {
+    width: 25%;
+    min-width: 100px;
 }
 #countbtn {
-    background: #2a629b;
     background: linear-gradient(90deg, rgba(42, 98, 155, 1) 10%, rgba(31, 66, 153, 1) 65%, rgba(9, 82, 227, 1) 100%);
     color: white;
     height: 55px;
@@ -72,10 +86,16 @@ input{
     border-radius: 5px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
+#countbtn:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    cursor: pointer;
+}
 #countdisplay {
     background-color: lightgray;
-    width: 700px;
-    height: 200px;
+    width: 90%;
+    height: auto;
+    min-height: 200px;
     margin-top: 20px;
     border-width: 5px;
     border-radius: 5px;
@@ -89,19 +109,19 @@ h2 {
 }
 #counthistory {
     background-color: lightgray;
-    width: 700px;    
-    height: 200px;
+    width: 90%;
+    height: auto;
+    min-height: 200px;
     margin-top: 20px;
     border-width: 5px;
     border-radius: 5px;
 }
 #cleanbtn {
-    background: #9b2a3d;
     background: linear-gradient(174deg, rgba(155, 42, 61, 1) 10%, rgba(232, 21, 21, 1) 65%, rgba(227, 16, 9, 1) 100%);
     width: 100px;
     height: 50px;
-    margin-top: 81px;
-    margin-left: 600px;
+    margin: 10px auto;
+    display: block;
     border-radius: 5px;
     border-width: 2px;
     border-color: black;
@@ -117,7 +137,6 @@ h2 {
 }
 #langbtn {
     margin: 150px auto 0 auto;
-    background: #2a9b9b;
     background: radial-gradient(circle, rgba(42, 155, 155, 1) 10%, rgba(13, 182, 255, 1) 65%, rgba(178, 178, 235, 1) 100%);
     width: 300px;
     height: 75px;
@@ -126,6 +145,7 @@ h2 {
     border-color: black;
     font-size: 200%;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    display: block;
 }
 #langbtn:hover {
     transform: scale(1.2);

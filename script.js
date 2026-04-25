@@ -28,3 +28,24 @@ countbtn.addEventListener('click', function() {
     history.push(`${a} ${op} ${b} = ${res}`);
     updateHistory();
 });
+function updateHistory() {
+    const historyDiv = document.getElementById('counthistory');
+    historyDiv.innerHTML = '<h2 id="historyh2">История вычислений:</h2>';
+    history.forEach(function(item) {
+        const p = document.createElement('p');
+        p.textContent = item;
+        historyDiv.appendChild(p);
+    });
+    const btn = document.createElement('button');
+    btn.id = 'cleanbtn';
+    btn.textContent = 'Очистить';
+    btn.addEventListener('click', clearHistory);
+    historyDiv.appendChild(btn);
+}
+
+function clearHistory() {
+    history = [];
+    updateHistory();
+}
+
+cleanbtn.addEventListener('click', clearHistory);

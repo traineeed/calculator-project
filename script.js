@@ -7,7 +7,6 @@ const cleanbtn = document.getElementById('cleanbtn');
 
 let history = [];
 
-// Выносим логику вычисления в отдельную функцию
 function calculate() {
     const a = parseFloat(firstnum.value);
     const b = parseFloat(secondnum.value);
@@ -54,10 +53,9 @@ function clearHistory() {
 
 cleanbtn.addEventListener('click', clearHistory);
 
-// ДОБАВЛЯЕМ ОБРАБОТЧИК КЛАВИШИ ENTER
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Предотвращаем возможное обновление страницы
-        calculate(); // Вызываем функцию вычисления
+        event.preventDefault();
+        calculate(); 
     }
 });

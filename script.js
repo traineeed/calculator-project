@@ -7,7 +7,8 @@ const cleanbtn = document.getElementById('cleanbtn');
 
 let history = [];
 
-countbtn.addEventListener('click', function() {
+// Выносим логику вычисления в отдельную функцию
+function calculate() {
     const a = parseFloat(firstnum.value);
     const b = parseFloat(secondnum.value);
     const op = opchoose.value;
@@ -27,7 +28,10 @@ countbtn.addEventListener('click', function() {
 
     history.push(`${a} ${op} ${b} = ${res}`);
     updateHistory();
-});
+}
+
+countbtn.addEventListener('click', calculate);
+
 function updateHistory() {
     const historyDiv = document.getElementById('counthistory');
     historyDiv.innerHTML = '<h2 id="historyh2">История вычислений:</h2>';
@@ -49,3 +53,11 @@ function clearHistory() {
 }
 
 cleanbtn.addEventListener('click', clearHistory);
+
+// ДОБАВЛЯЕМ ОБРАБОТЧИК КЛАВИШИ ENTER
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Предотвращаем возможное обновление страницы
+        calculate(); // Вызываем функцию вычисления
+    }
+});
